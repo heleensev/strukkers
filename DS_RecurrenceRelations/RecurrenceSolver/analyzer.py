@@ -91,10 +91,12 @@ class Analyzer:
         r = sympy.Symbol('r')
         char_eq = r ** self._degree
 
-        ordered = sorted(anc.values())
+        ordered = sorted(anc.keys())
 
-        for i in range(0, ordered):
-            char_eq = char_eq - anc[ordered[i]]
+        for i in ordered:
+            char_eq = char_eq - anc[i] * r**(self._degree -i)
+
+
     def _create_general_solution(self):
         #characteristic equation get
         char_eq = self.char_eq
@@ -126,18 +128,20 @@ class Analyzer:
                     #j is used for counting the index of the alpha
                     for m, j in enumerate(range(0,rdict[i])):
                         if general_solution.endswith("("):
-                            general_solution += "alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                            general_solution += "alpha_" + str(alphacount) + "_" + str(j) + "*" "n**" + str(m)
                         else:
-                            general_solution += "+alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                            general_solution += "+alpha_" + str(alphacount) + "_" + str(j) + "*" "n**"+ str(m)
                     alphacount += 1
                     general_solution += ")*("+i+")**n"
                 else:
                     general_solution += "("
                     for m, j in enumerate(range(0,rdict[i])):
                         if general_solution.endswith("("):
-                            general_solution += "alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                            general_solution += "alpha_" + str(alphacount) + "_" + str(j) + "*" "n**"+ str(m)
                         else:
-                            general_solution += "+alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                            general_solution += "+alpha_" + str(alphacount) + "_" + str(j) + "*" "n**"+ str(m)
                     alphacount += 1
                     general_solution += ")*("+i+")**n"
-            self.general_solution = general_solution
+
+
+            self.general_solution = sympy.sympify(general_solution)
