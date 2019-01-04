@@ -40,6 +40,7 @@ class Parser:
             if not rec_eq == 'n':
                 pass
 
+        print(recur_form)
         recursplit = recur_form.split('=')[2:]
 
         self._symbols = {

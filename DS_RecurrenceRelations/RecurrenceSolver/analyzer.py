@@ -94,4 +94,4 @@ class Analyzer:
         ordered = sorted(anc.values())
 
         for i in range(0, ordered):
-            char_eq = char_eq - anc[ordered]
+            char_eq = char_eq - anc[ordered[i]]

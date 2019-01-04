@@ -1,15 +1,21 @@
 import fire
 import os
-from .raw_parser import Parser
-from .analyzer import Analyzer
-from .solver import Solver
+import sys
+
+sys.path.append('/home/sevvy/Documents/data science/ds/computer assignment/recurrence_relation')
+
+from DS_RecurrenceRelations.RecurrenceSolver import raw_parser
+from DS_RecurrenceRelations.RecurrenceSolver import analyzer
+from DS_RecurrenceRelations.RecurrenceSolver import solver
+
 
 class Recurrence:
 
-    def __init__(self, inputdir, outputdir):
+    def __init__(self, inputdir):
         self._inputdir = inputdir
-        self._outputdir = outputdir
+        # self._outputdir = outputdir
 
+        self._inputstr = str()
         self._parsed = self._parse_input()
         self._analyzer = self._analyze()
 
@@ -35,11 +41,12 @@ class Recurrence:
         if not match:
             print('warning: input file not of expected form')
 
-        parsed = Parser(self._inputstr)
+        parsed = raw_parser.Parser(self._inputstr)
         return parsed
 
     def _analyze(self):
-        analyzed = Analyzer()
+        parsed = self._parsed
+        analyzed = analyzer.Analyzer(parsed._recurrence, parsed._initials_dict)
 
         return analyzed
 
