@@ -95,3 +95,49 @@ class Analyzer:
 
         for i in range(0, ordered):
             char_eq = char_eq - anc[ordered[i]]
+    def _create_general_solution(self):
+        #characteristic equation get
+        char_eq = self.char_eq
+
+        #this function extracts the roots and puts them in a dictionary like; root:multiplicity
+        rdict = sympy.roots(char_eq)
+        #general_solution string, starts empty and is filled for each new characteristic equation
+        general_solution = ""
+        #for numbering alphas
+        alphacount = 1
+        #i = root, rdict[i] = multiplicity
+        for i in rdict:
+            if rdict[i] == 1:
+                print("root " + str(i) + " has multiplicity equal to 1")
+                if general_solution:
+                    #if the general_solution is not empty, append stuff with a plus
+                    general_solution += "+alpha_"+str(alphacount)+"*"+str(i)+"**n"
+                else:
+                    #if the general solution is empty, append stuff without a plus
+                    general_solution += "alpha_"+str(alphacount) + "*"+str(i)+"**n"
+                #add 1 to alphacount so that the variables are numbered correctly
+                alphacount += 1
+            #if rdict[i] is greater than 1, there are more than 1 multiplicities, the general solution is built differently
+            elif rdict[i] > 1:
+                print("root " + str(i) + " has multiplicity greater than 1")
+                if general_solution:
+                    general_solution += "+("
+                    #clever use of enumerate function; m is used as a power to n, which always starts at 0, which means n is equal to 1 making it disposable
+                    #j is used for counting the index of the alpha
+                    for m, j in enumerate(range(0,rdict[i])):
+                        if general_solution.endswith("("):
+                            general_solution += "alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                        else:
+                            general_solution += "+alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                    alphacount += 1
+                    general_solution += ")*("+i+")**n"
+                else:
+                    general_solution += "("
+                    for m, j in enumerate(range(0,rdict[i])):
+                        if general_solution.endswith("("):
+                            general_solution += "alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                        else:
+                            general_solution += "+alpha_" + str(alphacount) + "_" str(j) + "*" "n**"+m
+                    alphacount += 1
+                    general_solution += ")*("+i+")**n"
+            self.general_solution = general_solution
