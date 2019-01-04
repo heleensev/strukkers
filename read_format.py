@@ -7,7 +7,7 @@ def main():
     inputpath = argv[1]
     file = read_file(inputpath)
     recurrence, split_formula = get_recurrence(file)
-    initial_dict = get_initial_conditions(split_formula)
+    # initial_dict = get_initial_conditions(split_formula)
     constants = get_constants(recurrence)
     continuous, degrees = get_continuous(recurrence)
     degree = get_degree(degrees)
