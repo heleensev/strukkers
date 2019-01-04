@@ -132,7 +132,7 @@ class Analyzer:
                         else:
                             general_solution += "+alpha_" + str(alphacount) + "_" + str(j) + "*" "n**"+ str(m)
                     alphacount += 1
-                    general_solution += ")*("+i+")**n"
+                    general_solution += ")*("+str(i)+")**n"
                 else:
                     general_solution += "("
                     for m, j in enumerate(range(0,rdict[i])):
@@ -141,7 +141,7 @@ class Analyzer:
                         else:
                             general_solution += "+alpha_" + str(alphacount) + "_" + str(j) + "*" "n**"+ str(m)
                     alphacount += 1
-                    general_solution += ")*("+i+")**n"
+                    general_solution += ")*("+str(i)+")**n"
 
 
             self.general_solution = sympy.sympify(general_solution)
