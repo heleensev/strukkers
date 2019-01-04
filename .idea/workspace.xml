@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d82f9f04-34cb-4f45-b2e4-fa0468472fd2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/raw_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/raw_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +20,8 @@
       <file leaf-file-name="read_format.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/read_format.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            <state relative-caret-position="540">
+              <caret line="135" column="36" lean-forward="true" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -45,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recurrence.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="recurrence.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="630">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -66,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analyzer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="analyzer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="816">
+              <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -97,9 +93,9 @@
         <option value="$PROJECT_DIR$/read_format.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/parser.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/raw_parser.py" />
-        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/solver.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" />
+        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py" />
       </list>
     </option>
   </component>
@@ -209,9 +205,9 @@
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3490566" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="9" visible="true" weight="0.2626183" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="9" visible="true" weight="0.2626183" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3294025" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20454545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20454545" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
@@ -366,22 +362,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/read_format.py">
+    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="630">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -393,12 +379,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py">
+    <entry file="file://$PROJECT_DIR$/read_format.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+        <state relative-caret-position="540">
+          <caret line="135" column="36" lean-forward="true" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

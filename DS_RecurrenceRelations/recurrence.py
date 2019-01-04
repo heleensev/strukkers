@@ -2,6 +2,7 @@ import fire
 import os
 from .raw_parser import Parser
 from .analyzer import Analyzer
+from .solver import Solver
 
 class Recurrence:
 
