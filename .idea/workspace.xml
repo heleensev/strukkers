@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d82f9f04-34cb-4f45-b2e4-fa0468472fd2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" afterDir="false" />
-    </list>
+    <list default="true" id="d82f9f04-34cb-4f45-b2e4-fa0468472fd2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,20 +54,11 @@
       <file leaf-file-name="equationbuilder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
+            <state relative-caret-position="1033">
               <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="polytools.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/sympy/polys/polytools.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -261,7 +250,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="2560" height="1413" extended-state="7" />
+    <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -613,23 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/sympy/polys/polytools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/raw_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -646,6 +618,23 @@
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/sympy/polys/polytools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1033">
+          <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
