@@ -71,5 +71,3 @@ class Parser:
                 initials_dict[init_key] = split_ini[1]
 
         return initials_dict
-
-
