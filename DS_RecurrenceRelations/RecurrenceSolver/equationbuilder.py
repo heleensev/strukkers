@@ -7,8 +7,10 @@ class EquationBuilder:
         self._recurrence = recurrence
         self._initials_dict = initials_dict
 
-        self.char_eq = None
+        self._char_eq = None
         self._analyze_recur_type()
+        self._create_char_eq()
+        self._create_general_solution()
 
     def _analyze(self):
         try:
@@ -26,9 +28,7 @@ class EquationBuilder:
         nonhomogenous = []
         anc_dict = {}
 
-
         rec = self._recurrence
-
         an_pat = r'(.*)\*s\(n([-+]\d+)\)'
 
         an_pat2 = r'(?<=s\(n-).+(?=\))'
@@ -65,18 +65,20 @@ class EquationBuilder:
         anc = self._anc_dict
 
         r = sympy.Symbol('r')
-        char_eq = r ** self._degree
+        degree = ((self._degree)*-1)
+        char_eq = r ** degree
 
-        ordered = sorted(anc.keys())
+        ordered_anc = sorted(anc.keys(), reverse=True)
+        ordered_const = [anc[v] for v in ordered_anc]
 
-        for i in ordered:
-            char_eq = char_eq - anc[i] * r**(self._degree -i)
+        for c, an in enumerate(range(0,len(ordered_anc))):
+            char_eq = char_eq - ordered_const[c] * r**(degree +ordered_anc[an])
 
+        self._char_eq = char_eq
 
     def _create_general_solution(self):
-        #characteristic equation get
-        char_eq = self.char_eq
 
+        char_eq = self._char_eq
         #this function extracts the roots and puts them in a dictionary like; root:multiplicity
         rdict = sympy.roots(char_eq)
         #general_solution string, starts empty and is filled for each new characteristic equation
