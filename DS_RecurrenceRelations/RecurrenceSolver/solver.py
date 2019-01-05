@@ -1,3 +1,4 @@
+import sympy
 
 class Solver:
 
@@ -9,6 +10,7 @@ class Solver:
         self._solve_alphas()
 
     def _solve_alphas(self):
+
 
         # equations = []
         # for i, c in self._initialConditions.items():
@@ -31,4 +33,16 @@ class Solver:
         #
         # return solved
 
-        equation = list()
+        general_sol = self._general_solution
+        ini_equations = list()
+        symbols = {'n': sympy.var("n", integer = True)}
+        # solve_symbols = [e for n, e in ctx.items() if n != "n"]
+
+        for i, c in self._initials_dict.items():
+            ini_eq = general_sol - sympy.sympify("({})".format(c), symbols)
+            ini_eq = ini_eq.subs(symbols['n'], i)
+            ini_equations.append(ini_eq)
+
+        solutions = sympy.linsolve(ini_equations)
+
+        print(solutions)

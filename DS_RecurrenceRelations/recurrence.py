@@ -2,7 +2,7 @@ import fire
 import os
 import sys
 import re
-sys.path.append('../../recurrence_relation')
+sys.path.append('../../strukkers')
 
 from DS_RecurrenceRelations.RecurrenceSolver import raw_parser
 from DS_RecurrenceRelations.RecurrenceSolver import equationbuilder
@@ -42,13 +42,13 @@ class Recurrence:
 
     def _build_equation(self):
         parsed = self._parsed
-        general_solution = equationbuilder.EquationBuilder(parsed._recurrence, parsed._initials_dict)
-
+        builder = equationbuilder.EquationBuilder(parsed._recurrence, parsed._initials_dict)
+        general_solution = builder._general_solution
         return general_solution
 
     def _solve_recur(self):
-        initials = self.parsed._initials_dict
-        solved = solver(self._general_solution, initials)
+        initials = self._parsed._initials_dict
+        solved = solver.Solver(self._general_solution, initials)
 
 
     def _out_file(self):

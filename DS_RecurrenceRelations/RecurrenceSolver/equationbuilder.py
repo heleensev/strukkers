@@ -8,6 +8,7 @@ class EquationBuilder:
         self._initials_dict = initials_dict
 
         self._char_eq = None
+        self._general_solution = None
         self._analyze_recur_type()
         self._create_char_eq()
         self._create_general_solution()
@@ -122,7 +123,7 @@ class EquationBuilder:
                     general_solution += ")*("+str(i)+")**n"
 
 
-            general_solution = sympy.sympify(general_solution)
+            self._general_solution = sympy.sympify(general_solution)
 
-            return general_solution
+            # return general_solution
 
