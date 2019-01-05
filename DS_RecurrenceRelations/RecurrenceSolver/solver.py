@@ -2,16 +2,17 @@ import sympy
 
 class Solver:
 
-    def __init__(self, general_sol, initials_dict):
+    def __init__(self, general_sol, symbols_dict, initials_dict):
 
         self._general_solution = general_sol
+        self._symbols_dict = symbols_dict
         self._initials_dict = initials_dict
 
         self._solve_alphas()
 
     def _solve_alphas(self):
 
-
+        symbols_dict = self._symbols_dict
         # equations = []
         # for i, c in self._initialConditions.items():
         #     eq = generalSolution - sympy.sympify("(%s)" % str(c))
@@ -34,15 +35,23 @@ class Solver:
         # return solved
 
         general_sol = self._general_solution
+
         ini_equations = list()
-        symbols = {'n': sympy.var("n", integer = True)}
+
         # solve_symbols = [e for n, e in ctx.items() if n != "n"]
 
         for i, c in self._initials_dict.items():
-            ini_eq = general_sol - sympy.sympify("({})".format(c), symbols)
-            ini_eq = ini_eq.subs(symbols['n'], i)
+            ini_eq = general_sol - sympy.sympify(c, symbols_dict)
+            ini_eq = ini_eq.subs(symbols_dict['n'], i)
             ini_equations.append(ini_eq)
 
-        solutions = sympy.linsolve(ini_equations)
+        symbols_list = [v for k, v in symbols_dict.items() if k != 'n']
+        solutions = sympy.linsolve(ini_equations, (symbols_list))
 
-        print(solutions)
+        sol = list(solutions)[0]
+
+        for symbol, s in zip(symbols_list, list(sol)):
+            general_sol = general_sol.subs(symbol, s)
+
+        general_sol = sympy.simplify(general_sol)
+        print(general_sol)
