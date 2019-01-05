@@ -32,5 +32,3 @@ class Solver:
         # return solved
 
         equation = list()
-
-        for 

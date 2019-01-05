@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d82f9f04-34cb-4f45-b2e4-fa0468472fd2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,8 +77,8 @@
       <file leaf-file-name="solver.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="510">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -263,7 +261,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
+    <frame x="0" y="27" width="2560" height="1413" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -654,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
