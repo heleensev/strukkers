@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d82f9f04-34cb-4f45-b2e4-fa0468472fd2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +34,8 @@
       <file leaf-file-name="recurrence.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
-              <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+            <state relative-caret-position="-45">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -53,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="equationbuilder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="equationbuilder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="583">
+              <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -74,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solver.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="solver.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="525">
+              <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -112,9 +114,10 @@
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/__init__.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/__init__.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/analyzer.py" />
-        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/raw_parser.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" />
+        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" />
+        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" />
       </list>
     </option>
   </component>
@@ -270,14 +273,14 @@
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.2949527" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32822758" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10111465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10111465" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="bottom" id="Find" order="11" weight="0.329653" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39905363" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39905363" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -595,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -619,6 +615,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/sympy/polys/polytools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="126" column="35" lean-forward="true" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/raw_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -631,28 +644,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        <state relative-caret-position="-45">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/miniconda3/lib/python3.6/site-packages/sympy/polys/polytools.py">
+    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="525">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
         </state>
       </provider>
     </entry>

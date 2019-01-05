@@ -122,4 +122,7 @@ class EquationBuilder:
                     general_solution += ")*("+str(i)+")**n"
 
 
-            self.general_solution = sympy.sympify(general_solution)
+            general_solution = sympy.sympify(general_solution)
+
+            return general_solution
+
