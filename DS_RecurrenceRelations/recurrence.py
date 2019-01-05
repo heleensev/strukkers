@@ -2,7 +2,7 @@ import fire
 import os
 import sys
 import re
-sys.path.append('../../recurrence_relation')
+sys.path.append('../../strukkers')
 
 from DS_RecurrenceRelations.RecurrenceSolver import raw_parser
 from DS_RecurrenceRelations.RecurrenceSolver import equationbuilder
