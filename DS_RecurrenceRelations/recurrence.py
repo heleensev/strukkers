@@ -58,7 +58,8 @@ class Recurrence:
             os.makedirs(outputdir)
 
         # build new output path
-        prev_name = os.path.basename(self._inputdir)
+        prev_name, extension = os.path.splitext(self._inputdir)
+        prev_name = prev_name + "-dir" + extension
         filename = os.path.join(outputdir, prev_name)
 
         # write file out to output path
