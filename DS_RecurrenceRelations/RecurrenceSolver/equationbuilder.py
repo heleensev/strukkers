@@ -19,47 +19,15 @@ class EquationBuilder:
 
     def _analyze_recur_type(self):
 
-
         s = sympy.Function("s")
         n = sympy.var("n", integer=True)
-        # i = sympy.Wild("i")
 
         homogenous = []
         nonhomogenous = []
         anc_dict = {}
 
-        # for arg in self._recurrence.args:
-        #     # if s in subequation then it is homogeneous
-        #     if arg.has(s):
-        #         an_pat = r'(\d*)\*s\(n([-+]\d+)\)'
-        #         match = re.match(an_pat, str(arg))
-        #         if match:
-        #             c = match.group(1)
-        #             an = match.group(2)
-        #             if not c:
-        #                 c = 1
-        #
-        #             anc_dict[an] = c
-        #         else:
-        #             # raise error
-        #             pass
-        #         homogenous.append(arg)
-        #
-        #     else:
-        #         nonhomogenous.append(arg)
 
         rec = self._recurrence
-        # go = True
-        #
-        # for arg in rec.args:
-        #     while go:
-        #         if arg.func == sympy.Add:
-        #             arg
-        #         elif arg.has(n):
-        #             go = False
-        #
-        #         else:
-        #             go = False
 
         an_pat = r'(.*)\*s\(n([-+]\d+)\)'
 
