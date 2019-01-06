@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d82f9f04-34cb-4f45-b2e4-fa0468472fd2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" beforeDir="false" afterPath="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="equationbuilder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="equationbuilder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="165">
+              <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -81,10 +79,15 @@
       <file leaf-file-name="solver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="255">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -121,9 +124,10 @@
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/raw_parser.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/recurrence.py" />
-        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" />
-        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" />
         <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py" />
+        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" />
+        <option value="$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -280,7 +284,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329653" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
@@ -341,22 +344,22 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>28</line>
+          <line>26</line>
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>30</line>
+          <line>28</line>
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>35</line>
+          <line>33</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>34</line>
+          <line>32</line>
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -371,42 +374,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>36</line>
+          <line>34</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>46</line>
+          <line>44</line>
           <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>48</line>
+          <line>46</line>
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>43</line>
+          <line>41</line>
           <option name="timeStamp" value="130" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>41</line>
+          <line>39</line>
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>50</line>
+          <line>48</line>
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>51</line>
+          <line>49</line>
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py</url>
-          <line>53</line>
+          <line>51</line>
           <option name="timeStamp" value="134" />
         </line-breakpoint>
       </breakpoints>
@@ -718,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ds_assignment_files/comass03.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -764,13 +760,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/equationbuilder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="29" column="57" lean-forward="true" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DS_RecurrenceRelations/RecurrenceSolver/solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
