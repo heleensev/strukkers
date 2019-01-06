@@ -26,7 +26,7 @@ class EquationBuilder:
     def _build_equations(self):
 
         particulars = []
-        for part in self.non_homogeneous:
+        for part in self.nonhomogenous:
             particulars.append(self.particular_builder())
 
     def _analyze_recur_type(self):
