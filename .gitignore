@@ -1,5 +1,6 @@
 # ignore all pycache
 DS_RecurrenceRelations/__pycache__/*
+DS_RecurrenceRelations/RecurrenceSolver/__pycache__/*
 
 #ignore .idea
 .idea/*
