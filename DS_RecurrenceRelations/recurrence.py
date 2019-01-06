@@ -16,8 +16,12 @@ class Recurrence:
 
         self._inputstr = str()
         self._closedform = None
+        self.symbols_dict = None
+        self.homogeneous = None
+        self.nonhomogeneous = None
+
         self._parsed = self._parse_input()
-        self._general_solution, self._symbols_dict = self._build_equation()
+        self._general_solution = self._build_equation()
         self._solved = self._solve_recur()
 
 
@@ -44,13 +48,19 @@ class Recurrence:
         parsed = self._parsed
         builder = equationbuilder.EquationBuilder(parsed._recurrence, parsed._initials_dict)
         general_solution = builder._general_solution
-        symbols_dict = builder._symbols_dict
-        return general_solution, symbols_dict
+
+        self.homogeneous = builder.homogenous
+        self.nonhomogeneous = builder.nonhomogenous
+        self.symbols_dict = builder._symbols_dict
+
+        return general_solution
 
     def _solve_recur(self):
         initials = self._parsed._initials_dict
-
-        solved = solver.Solver(self._general_solution, self._symbols_dict, initials)
+        symbols = self.symbols_dict
+        homogenous = self.homogeneous
+        nonhomogenous = self.nonhomogeneous
+        solved = solver.Solver(self._general_solution, homogenous, nonhomogenous, symbols, initials)
 
 
     def _out_file(self):
