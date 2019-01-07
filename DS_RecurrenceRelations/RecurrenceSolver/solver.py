@@ -12,6 +12,9 @@ class Solver:
 
         self.homogeneous_solution = None
         self.solve()
+        # self.alt_solve()
+
+
 
     def solve(self):
 
@@ -30,10 +33,15 @@ class Solver:
 
         # solve_symbols = [e for n, e in ctx.items() if n != "n"]
 
+        outputfile = open('solve_alpha_test.txt', 'w')
+        outputfile.write('before subtracting\n'+str(general_sol)+ '\n\n')
+
         for i, c in self._initials_dict.items():
+
             ini_eq = general_sol - sympy.sympify('({})'.format(c))
             ini_eq = ini_eq.subs(symbols_dict['n'], int(i))
-            #
+
+            outputfile.write(str(general_sol.subs(symbols_dict['n'], int(i))) + '= ' + str(i) +'\t' + 'i: ' + i + ' ' + 'c: '+ c + '\n___________________________________________________________________________________________________________\n\n')
             print(ini_eq)
             print(sympy.srepr(ini_eq))
             print('___________________________________________________________')
@@ -41,79 +49,98 @@ class Solver:
 
         symbols_list = [v for k, v in symbols_dict.items() if k != 'n']
 
+        outputfile.close()
+
         print(symbols_list)
         solutions = sympy.linsolve(ini_equations, symbols_list)
 
+        if not solutions:
+            print('no solutions found')
         sol = list(solutions)[0]
 
         for symbol, s in zip(symbols_list, list(sol)):
             general_sol = general_sol.subs(symbol, s)
 
+        print('solution: {} '.format(str(general_sol)))
+
+
+
         return sympy.simplify(general_sol)
 
 
 
-    def _solve_non_homogenous(self):
+    def alt_solve(self):
 
-        def _solveNonHomogeneous(self, realRoots, homogeneous, nonHomogenous, generalSolution, ctx):
-            """
-            get the closed form equation for a non-homogeneous recurrence relation
-            given the general solution for the associated homogeneous recurrence
+        alphas = self.alt_solve_alphas()
+        solution = self.alt_sub_alphas(alphas)
 
-            Args:
-                realRoots (dict of sympy expr: int): The roots of the characteristic equation with multiplicities
-                homogeneous (sympy expression): The associated homogenous equation
-                nonHomogenous (sympy expression): The part of the equation that makes the recurrence non homogenous
-                generalSolution (sympy expression): The general solution for the associated homogeneous recurrence
-                ctx (dict of string: sympy symbol): The context of the general solution
+        print('solution: {}'.format(solution))
 
-            Returns:
-                sympy expression: The closed form solved
-            """
+    def alt_solve_alphas(self):
 
-            solveableRecurrence = self._recurrence - sympy.sympify("s(n)", self._sympy_context)
+        # alphas = {}
+        # i = 0
+        # for key in self.initials:
+        #     variable = symbols("a{}".format(i))
+        #     alpha = self.solve_initial(alphas, equation, key, variable)
+        #     alphas[i] = alpha
+        #     i = i + 1
+        #
+        # return alphas
 
-            guess = 0
-            guess_ctx = {
-                "n": sympy.var("n", integer=True)
-            }
+        initials = self._initials_dict
 
-            # Check if non homogenous part is exponential in n
-            is_exponential = self._is_exponential(nonHomogenous, False)
+        alphas = [v for k, v in self._symbols_dict.items() if k != 'n']
+        solved_alphas = {}
 
-            if is_exponential:
-                guess_ctx["a"] = sympy.var("a")
-                guess_ctx["b"] = sympy.var("b")
-                guess_ctx["c"] = sympy.var("c")
+        for n, alpha in zip(initials, alphas):
+            solved_alpha = self.alt_solve_initial(solved_alphas, n, alpha)
+            solved_alphas[alpha] = solved_alpha
 
-                guess = sympy.sympify("a + b**n + c", guess_ctx)
+        return solved_alphas
 
-            solve_symbols = [e for n, e in guess_ctx.items() if n != "n"]
-            for i in range(0, self._degree + 1):
-                guessFilled = guess.subs(guess_ctx["n"], guess_ctx["n"] - i)
-                replaceFunction = sympy.sympify("s(n-%d)" % i, self._sympy_context).simplify()
-                solveableRecurrence = solveableRecurrence.subs(replaceFunction, guessFilled)
+    def alt_solve_initial(self, solved_alphas, ini, alpha):
+        #
+        # n = symbols("n")
+        # initial = self.initials[key]
+        # inp = sympify(int(key))
+        # out = sympify(initial)
+        #
+        # general = general.subs(n, inp)
+        #
+        # for a in alphas:
+        #     alpha = symbols("a{}".format(a))
+        #     general = general.subs(alpha, alphas[a])
+        #
+        # eq = Eq(general - out)
+        # result = solve(eq, var)
+        # return result[0]
 
-            solutions = list(sympy.solve(solveableRecurrence, solve_symbols))
-            if len(solutions) == 0:
-                msg = "Couldn't solve a guess for a particular solution."
-                #raise RecurrenceSolveFailed(msg)
 
-            solutions = list(solutions[0])
+        general = self._general_solution
+        initials = self._initials_dict
+        n_eq = initials[ini]
 
-            # The solution might contain free variables so we replace those with 0
-            solution_just_symbols = [s for s in solutions if s in solve_symbols]
-            for i in range(0, len(solutions)):
-                for s in solution_just_symbols:
-                    solutions[i] = solutions[i].subs(s, 0)
+        # subsititute n in general equation for initial n
+        n = sympy.var("n", integer=True)
+        general = general.subs(n, int(ini))
 
-                solutions[i] = solutions[i].simplify()
+        for s_alpha in solved_alphas:
+            general = general.subs(s_alpha, solved_alphas[s_alpha])
 
-            # replace the solution for the guess into the solveable recurrence
-            particularSolution = solveableRecurrence
-            for symbol, sub in zip(solve_symbols, solutions):
-                particularSolution = particularSolution.subs(symbol, sub)
+        equation = sympy.Eq(general, int(n_eq))
+        result = sympy.solve(equation, alpha, simplify=False)
 
-            result = particularSolution + generalSolution
+        return result[0]
 
-            return self._calculateClosedFromGeneralSolution(result, ctx)
+
+    def alt_sub_alphas(self, solved_alphas):
+
+        general = self._general_solution
+
+        for alpha in solved_alphas:
+            general = general.subs(alpha, solved_alphas[alpha])
+
+        solution = sympy.simplify(general)
+
+        return solution

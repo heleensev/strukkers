@@ -14,8 +14,9 @@ class Parser:
 
     def _check_input(self):
 
-        # remove whitespaces
-        input_str = self._inputstr.replace(' ','')
+        # remove newlines and whitespaces
+        input_str = self._inputstr.splitlines()
+        input_str = ''.join(input_str).replace(' ','')
         # check standard format
         eq_pattern = r'eqs\:=\[s\(.*\)=.*,+.*\];'
         match = rex.findall(eq_pattern, input_str, rex.S | rex.M)

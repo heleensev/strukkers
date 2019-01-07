@@ -39,25 +39,67 @@ class EquationBuilder:
         anc_dict = {}
 
         rec = self._recurrence
-        an_pat = r'(.*)\*s\(n([-+]\d+)\)'
+        an_pat = r'(.*)\**s\(n([-+]\d+)\)'
 
         for arg in rec.args:
             if arg.has(s):
                 homogeneous.append(arg)
                 if arg.has(n) and arg.has(s):
                     sub = arg.args
-                    const = sub[0]
                     arg = str(arg).replace(' ', '')
                     match = re.search(an_pat, arg)
                     an = match.group(2)
-                    anc_dict[int(an)] = int(const)
+                    if match.group(1):
+                        const = match.group(1).strip('*')
+                    else:
+                        const = '1'
+                    if not an.isdigit() or not const.isdigit(0):
+                        print('AAAAAAAH')
+                        print(arg)
+                        print('an: {}, const: {}'.format(an, const))
+                    anc_dict[sympy.sympify(an)] = sympy.sympify(const)
             else:
                 nonhomogeneous.append(arg)
-
+        print('ancdict: {}'.format(anc_dict))
         self._degree = min(anc_dict.keys())
         self._anc_dict = anc_dict
         self.homogenous = homogeneous
         self.nonhomogenous = nonhomogeneous
+
+        # s = sympy.Function("s")
+        # n = sympy.var("n", integer=True)
+        #
+        # homogeneous = []
+        # nonhomogeneous = []
+        # anc_dict = {}
+        #
+        # rec = self._recurrence
+        # an_pat = r'(.*)\*s\(n([-+]\d+)\)'
+        #
+        # for arg in rec.args:
+        #     if arg.has(s):
+        #         homogeneous.append(arg)
+        #         if arg.has(n) and arg.has(s):
+        #             sub = arg.args
+        #             const = sub[0]
+        #             arg = str(arg).replace(' ', '')
+        #             match = re.search(an_pat, arg)
+        #             if match.group(2):
+        #                 an = match.group(2)
+        #             else:
+        #                 an = '1'
+        #             anc_dict[sympy.sympify(an)] = sympy.sympify(const)
+        #     else:
+        #         nonhomogeneous.append(arg)
+        #
+        # print('ancdict: {}'.format(anc_dict))
+        #
+        # self._degree = min(anc_dict.keys())
+        # self._anc_dict = anc_dict
+        # self.homogenous = homogeneous
+        # self.nonhomogenous = nonhomogeneous
+
+
 
     def _create_char_eq(self):
         r = sympy.Symbol('r')
@@ -83,6 +125,14 @@ class EquationBuilder:
         for c, an in enumerate(range(0,len(ordered_anc))):
             char_eq = char_eq - ordered_const[c] * r**(degree +ordered_anc[an])
 
+        print('charasteric equation: {}'.format(char_eq))
+        print(sympy.factor(char_eq))
+        print(sympy.roots(char_eq))
+        print(len(sympy.roots(char_eq)))
+
+        rdict = {s: m for (s, m) in sympy.roots(char_eq).items() if sympy.I not in s.atoms()}
+
+        print('roots without imaginary: {}'.format(rdict))
         self._char_eq = char_eq
 
 
@@ -91,13 +141,15 @@ class EquationBuilder:
         symbols_dict = {'n': sympy.var("n", integer=True)}
         char_eq = self._char_eq
         #this function extracts the roots and puts them in a dictionary like; root:multiplicity
-        rdict = sympy.roots(char_eq)
+        # rdict = sympy.roots(char_eq)
+        rdict = {s: m for (s, m) in sympy.roots(char_eq).items() if sympy.I not in s.atoms()}
         #general_solution string, starts empty and is filled for each new characteristic equation
         general_solution = ""
         #for numbering alphas
         alphacount = 1
         #i = root, rdict[i] = multiplicity
         for i in rdict:
+            print('rdict i: {}'.format(rdict[i]))
             if rdict[i] == 1:
                 alpha = "alpha_" + str(alphacount)
                 alpha_eq = alpha + "*" + str(i) + "**n"
@@ -149,15 +201,16 @@ class EquationBuilder:
                     alphacount += 1
                     general_solution += ")*("+str(i)+")**n"
 
-            sol = sympy.sympify(general_solution, symbols_dict)
-            print(sol.args)
-            print(sympy.srepr(sol))
-            print('__________________________________________________')
+        sol = sympy.sympify(general_solution, symbols_dict)
+        print(sol.args)
+        print(sympy.srepr(sol))
+        print('__________________________________________________')
 
 
-            self._general_solution = sympy.sympify(general_solution, symbols_dict)
-            self._symbols_dict = symbols_dict
-            # return general_solution
+        self._general_solution = sympy.sympify(general_solution, symbols_dict, )
+        self._symbols_dict = symbols_dict
+        print()
+        # return general_solution
 
     def particular_builder(self):
 
