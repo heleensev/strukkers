@@ -123,13 +123,13 @@ class Solver:
 
         # subsititute n in general equation for initial n
         n = sympy.var("n", integer=True)
-        general = general.subs(n, int(ini))
+        general_s = general.subs(n, int(ini))
 
         for s_alpha in solved_alphas:
-            general = general.subs(s_alpha, solved_alphas[s_alpha])
+            general_s = general_s.subs(s_alpha, solved_alphas[s_alpha])
 
-        equation = sympy.Eq(general, int(n_eq))
-        result = sympy.solve(equation, alpha, simplify=False)
+        equation = sympy.Eq(general_s, int(n_eq))
+        result = sympy.solve(equation, alpha, simplify=False, implicit=True)
 
         return result[0]
 

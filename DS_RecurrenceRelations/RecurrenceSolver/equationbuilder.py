@@ -141,8 +141,8 @@ class EquationBuilder:
         symbols_dict = {'n': sympy.var("n", integer=True)}
         char_eq = self._char_eq
         #this function extracts the roots and puts them in a dictionary like; root:multiplicity
-        # rdict = sympy.roots(char_eq)
-        rdict = {s: m for (s, m) in sympy.roots(char_eq).items() if sympy.I not in s.atoms()}
+        rdict = sympy.roots(char_eq)
+        # rdict = {s: m for (s, m) in sympy.roots(char_eq).items() if sympy.I not in s.atoms()}
         #general_solution string, starts empty and is filled for each new characteristic equation
         general_solution = ""
         #for numbering alphas
@@ -152,7 +152,7 @@ class EquationBuilder:
             print('rdict i: {}'.format(rdict[i]))
             if rdict[i] == 1:
                 alpha = "alpha_" + str(alphacount)
-                alpha_eq = alpha + "*" + str(i) + "**n"
+                alpha_eq = alpha + "*(" + str(i) + ")**n"
                 symbols_dict[alpha] = sympy.var(alpha)
 
                 print("root " + str(i) + " has multiplicity equal to 1")
@@ -201,13 +201,13 @@ class EquationBuilder:
                     alphacount += 1
                     general_solution += ")*("+str(i)+")**n"
 
-        sol = sympy.sympify(general_solution, symbols_dict)
-        print(sol.args)
-        print(sympy.srepr(sol))
-        print('__________________________________________________')
+        # sol = sympy.sympify(general_solution, symbols_dict)
+        # print(sol.args)
+        # print(sympy.srepr(sol))
+        # print('__________________________________________________')
 
 
-        self._general_solution = sympy.sympify(general_solution, symbols_dict, )
+        self._general_solution = sympy.sympify(general_solution, symbols_dict)
         self._symbols_dict = symbols_dict
         print()
         # return general_solution
