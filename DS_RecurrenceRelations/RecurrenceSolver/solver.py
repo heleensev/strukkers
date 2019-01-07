@@ -18,8 +18,7 @@ class Solver:
         self.homogeneous_solution = self._solve_alphas()
 
         for part in self._non_homogeneous:
-
-        pass
+            pass
 
 
     def _solve_alphas(self):
