@@ -55,6 +55,7 @@ class Solver:
         outputfile.close()
 
         print(symbols_list)
+
         solutions = sympy.linsolve(ini_equations, symbols_list)
 
         if not solutions:
@@ -65,7 +66,6 @@ class Solver:
             general_sol = general_sol.subs(symbol, s)
 
         print('solution: {} '.format(str(general_sol)))
-
 
 
         return sympy.simplify(general_sol)

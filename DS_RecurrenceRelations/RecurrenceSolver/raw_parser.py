@@ -7,6 +7,7 @@ class Parser:
     def __init__(self, inputstr):
         self._inputstr = inputstr
 
+        self._raw_recurrence = None
         self._check_input()
         recur_form, initials = self._split_input()
         self._recurrence = self._get_recurrence(recur_form)
@@ -62,6 +63,8 @@ class Parser:
         }
 
         recurrence = recur_form.replace("^", "**")
+        self._raw_recurrence = recurrence
+
         recurrence = sympy.sympify(recurrence, self._symbols)
 
         return recurrence
