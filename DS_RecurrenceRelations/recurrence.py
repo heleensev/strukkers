@@ -34,17 +34,17 @@ class Recurrence:
 
     def _process_relation(self):
 
-       try:
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
-            print('Processing...\n')
-            self._parsed = self._parse_input()
-            self._general_solution = self._build_equation()
-            self._solved = self.try_solve(self._solve_recur, 10)
-            self._write_output()
-       except Exception as e:
-           exc_type, exc_obj, exc_tb = sys.exc_info()
-           fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-           print(exc_type, fname, exc_tb.tb_lineno)
+       # try:
+        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
+        print('Processing...\n')
+        self._parsed = self._parse_input()
+        self._general_solution = self._build_equation()
+        self._solved = self.try_solve(self._solve_recur, 10)
+        self._write_output()
+       # except Exception as e:
+       #     exc_type, exc_obj, exc_tb = sys.exc_info()
+       #     fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+       #     print(exc_type, fname, exc_tb.tb_lineno)
 
     def _loop_directory(self):
 

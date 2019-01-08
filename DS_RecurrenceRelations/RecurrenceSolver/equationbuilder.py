@@ -9,6 +9,7 @@ class EquationBuilder:
         self._initials_dict = initials_dict
         self._general_solution = None
         self._char_eq = None
+        self.particular_solution = ''
         self.nonhomogenous = None
         self._symbols_dict = None
         self.roots = None
@@ -26,12 +27,13 @@ class EquationBuilder:
 
 
     def _build_equations(self):
+        try:
+            particulars = []
 
-        particulars = []
-
-        if self.nonhomogenous:
-            particulars.append(self.particular_builder())
-
+            if self.nonhomogenous:
+                particulars.append(self.particular_builder())
+        except:
+            pass
 
     def _analyze_recur_type(self):
 
